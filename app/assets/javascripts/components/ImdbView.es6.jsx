@@ -8,10 +8,12 @@ class ImdbView extends React.Component {
   }
     updateSearchResults(results) {
       this.setState({
-        movies: results["Search"]
+        movies: results
       })
     }
+
     render() {
+
       return (
         <div>
         <header id="top-nav">
@@ -19,7 +21,7 @@ class ImdbView extends React.Component {
           <SearchBoxView searchedMovies={this.updateSearchResults} />
         </header>
         <section className="container">
-          <SearchResultsView movies={this.state.movies}/>
+        <SearchResultsView movies={this.state.movies}/>
         </section>
         </div>
       )

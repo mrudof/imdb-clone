@@ -5,4 +5,7 @@ class ImdbController < ApplicationController
   def search
   end
 
+  def find
+  end
+
 end
